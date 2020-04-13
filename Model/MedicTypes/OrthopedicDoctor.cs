@@ -6,7 +6,6 @@ namespace EssensysHospitalWPF.Model.MedicTypes
 {
     class OrthopedicDoctor : Doctor
     {
-
         public OrthopedicDoctor(int id, string name, string forName, string cnp, DateTime hiredDate, string universityGraduated, int residencyDuration, float residencyGrade)
         {
             Id = id;
