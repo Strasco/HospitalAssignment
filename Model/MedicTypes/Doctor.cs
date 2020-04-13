@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EssensysHospitalWPF.Model
 {
-    class Medic
+    abstract class Doctor
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,7 +14,16 @@ namespace EssensysHospitalWPF.Model
         public string UniversityGraduated { get; set; }
         public int ResidencyYearDuration { get; set; } //Durata rezidentiatului in ani
         public float ResidencyGrade { get; set; }//punctajul la rezidentiat
-        public float RiskFactor { get; set; }//factorul de risc
-            
+        public abstract float RiskFactor { get;}//factorul de risc
+        protected float BaseSalary { get { return 1500; } }
+        public float CalculateSalary()
+        {
+            float salary;
+            var today = DateTime.Today;
+            int years = today.Year - HiredDate.Year;
+
+            salary = BaseSalary * years * RiskFactor;
+            return salary;
+        }
     }
 }

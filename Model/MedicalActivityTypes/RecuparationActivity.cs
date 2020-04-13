@@ -12,9 +12,10 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
         public int DurationInWeeks { get; set; }
         
 
-        public RecuparationActivity(string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic)
+        public RecuparationActivity(int id, string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic)
         {
             //base fields
+            Id = id;
             PacientName = pacientName;
             PacientForname = pacientForname;
             PatientBirthday = pacientBirthDay;
@@ -39,7 +40,7 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
                 {
                     finalPrice += _price;
                 }
-                else if(i>10 && i % 5 == 0)//daca e mai mare de 10 si este si multiplu de 6 pret cu discount
+                else if(i>10 && i % 5 == 0)//daca e mai mare de 10 si este si multiplu de 5 pret cu discount
                 {
                     finalPrice += _discountedPrice;
                 }

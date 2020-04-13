@@ -11,5 +11,6 @@ namespace EssensysHospitalWPF.Model
         public string PacientForname {get; set;}
         public DateTime PatientBirthday {get; set;}
         public bool HasChronicDiseases {get; set;}
+        public bool MEDICAL_INSURANCE { get; set; }
     }
 }

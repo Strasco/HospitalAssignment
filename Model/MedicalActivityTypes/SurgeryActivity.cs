@@ -4,14 +4,15 @@ using System.Text;
 
 namespace EssensysHospitalWPF.Model.MedicalActivityTypes
 {
-    class Surgery : MedicalActivity
+    class SurgeryActivity : MedicalActivity
     {
         private int _priceLocal;
         private int _priceGeneral;
         private Anesthetic _anestheticUsed;
 
-        public Surgery(string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, float ml, Anesthetic anesthetic)
+        public SurgeryActivity(int id, string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, float ml, Anesthetic anesthetic)
         {
+            Id = id;
             PacientName = pacientName;
             PacientForname = pacientForname;
             PatientBirthday = pacientBirthDay;
