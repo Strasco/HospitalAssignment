@@ -12,7 +12,9 @@ namespace EssensysHospitalWPF.Model
         public string CNP { get; set; }
         public DateTime HiredDate { get; set; }
         public string UniversityGraduated { get; set; }
-        public int ResidencyYearDuration { get; set; } //Durata rezidentiatului
+        public int ResidencyYearDuration { get; set; } //Durata rezidentiatului in ani
+        public float ResidencyGrade { get; set; }//punctajul la rezidentiat
+        public float RiskFactor { get; set; }//factorul de risc
             
     }
 }
