@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\
+C:\Users\vladz\Desktop\EssensysAssignment\ProgramSpital_SolutieVisualStudio\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\
 EssensysHospitalWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\App.xaml
-3-1298007185
+C:\Users\vladz\Desktop\EssensysAssignment\ProgramSpital_SolutieVisualStudio\EssensysHospitalClinic\EssensysHospitalWPF\App.xaml
+51205512118
 1-1575529357
-17-1829409113
+191539305214
 193980267411
-Pages\AllDoctorsWindow.xaml;Pages\MainWindow.xaml;Pages\NewDoctorWindow.xaml;
+Pages\AllDoctorsWindow.xaml;Pages\EditDoctor.xaml;Pages\MainWindow.xaml;Pages\NewDoctorWindow.xaml;Pages\RemoveDoctorWindow.xaml;
 
 False
 

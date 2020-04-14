@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nIZRwT5asXNapUTAFj1CfV9r9Ok77r59xS0kSwu3XQrsW/5/6SIAHK9B79I8SwG5r8sHDyPOueLttMIpRqUQiQ==",
+  "dgSpecHash": "gbG2ziefaKzKQ9l7Nm/DyD8d9suEGOqCXYyxaD8F6W6rNvrWYz5Q8elLtTv7B+wpcMyz0v9vl6D2EcsJ7HD4Jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vladz\\source\\repos\\EssensysHospitalClinic\\EssensysHospitalWPF\\EssensysHospitalWPF.csproj",
+  "projectFilePath": "C:\\Users\\vladz\\Desktop\\EssensysAssignment\\ProgramSpital_SolutieVisualStudio\\EssensysHospitalClinic\\EssensysHospitalWPF\\EssensysHospitalWPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladz\\.nuget\\packages\\log4net\\2.0.8\\log4net.2.0.8.nupkg.sha512",
     "C:\\Users\\vladz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

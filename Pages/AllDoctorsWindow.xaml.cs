@@ -15,6 +15,8 @@ namespace EssensysHospitalWPF.Pages
             {
                 allDoctorsRichText.AppendText(doctor.ToString() + "\r");
             }
+
+            
         }
 
         private void BackToMain(object sender, RoutedEventArgs e)

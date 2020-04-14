@@ -106,5 +106,17 @@ namespace EssensysHospitalWPF
             AllDoctorsWindow window = new AllDoctorsWindow();
             window.Show();
         }
+
+        private void deleteDoctorButton_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveDoctorWindow removeDoc = new RemoveDoctorWindow();
+            removeDoc.Show();
+        }
+
+        private void editDoctorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EditDoctor edit = new EditDoctor();
+            edit.Show();
+        }
     }
 }

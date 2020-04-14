@@ -1,0 +1,26 @@
+﻿<Window x:Class="EssensysHospitalWPF.Pages.EditDoctor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EssensysHospitalWPF.Pages"
+        mc:Ignorable="d"
+        Title="EditDoctor" Height="450" Width="800">
+    <Grid Background="#FF13BCD6">
+        <Label Content="Scrie ID-ul doctorului caruia vrei sa ii editezi detaliile si modifica urmatoarele campuri" HorizontalAlignment="Left" Margin="60,46,0,0" VerticalAlignment="Top" Height="24" Width="477"/>
+        <Button x:Name="EditDoctorDetails" Content="Salvare" HorizontalAlignment="Left" Margin="70,225,0,0" VerticalAlignment="Top" Height="31" Width="58" Click="EditDoctorDetails_Click"/>
+        <Label Content="Nume" HorizontalAlignment="Left" Margin="61,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
+        <Label Content="Prenume" HorizontalAlignment="Left" Margin="60,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="60,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
+        <Label Content="(Am pastrat editarea doar pentru nume si prenume, e identic pentru restul)" HorizontalAlignment="Left" Margin="39,369,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="backBtn" Content="Inapoi" HorizontalAlignment="Left" Margin="706,369,0,0" VerticalAlignment="Top" Height="32" Width="71" Click="backBtn_Click"/>
+        <RichTextBox x:Name="errorRichText" Margin="428,75,103,255" IsEnabled="False" Foreground="Red">
+            <FlowDocument/>
+        </RichTextBox>
+        <TextBox HorizontalAlignment="Left" Margin="122,79,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="forNameTextBox" HorizontalAlignment="Left" Margin="122,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="idTextBox" MaxLength="3" HorizontalAlignment="Left" Margin="122,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="122,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

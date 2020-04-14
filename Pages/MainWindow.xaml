@@ -19,6 +19,8 @@
             </FlowDocument>
         </RichTextBox>
         <Button x:Name="ShowDoctorsButton" Content="Afisare Doctori" HorizontalAlignment="Left" Margin="250,320,0,0" VerticalAlignment="Top" Height="73" Width="122" Click="ShowDoctors"/>
+        <Button x:Name="deleteDoctorButton" Content="Stergere Doctor" HorizontalAlignment="Left" Margin="377,320,0,0" VerticalAlignment="Top" Height="73" Width="105" Click="deleteDoctorButton_Click"/>
+        <Button x:Name="editDoctorBtn" Content="Editare Doctor" HorizontalAlignment="Left" Margin="487,320,0,0" VerticalAlignment="Top" Height="73" Width="109" Click="editDoctorBtn_Click"/>
 
     </Grid>
 </Window>
