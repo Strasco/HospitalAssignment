@@ -24,3 +24,4 @@ C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug
 C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\EssensysHospitalWPF.dll
 C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\EssensysHospitalWPF.pdb
 C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\EssensysHospitalWPF.genruntimeconfig.cache
+C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\obj\Debug\netcoreapp3.1\EssensysHospitalWPF.csprojAssemblyReference.cache

@@ -1,10 +1,5 @@
-﻿using EssensysHospitalWPF.Model;
-using EssensysHospitalWPF.Model.MedicTypes;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
-using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 

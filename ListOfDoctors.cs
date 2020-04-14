@@ -1,8 +1,6 @@
 ﻿using EssensysHospitalWPF.Model;
 using EssensysHospitalWPF.Model.MedicTypes;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace EssensysHospitalWPF

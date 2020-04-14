@@ -41,5 +41,15 @@
       <ResidencyYearDuration>7</ResidencyYearDuration>
       <ResidencyGrade>90</ResidencyGrade>
     </Doctor>
+    <Doctor xsi:type="CardiologistDoctor">
+      <Id>4</Id>
+      <Name>Maria</Name>
+      <ForName>Zaharia</ForName>
+      <CNP>1800301204105</CNP>
+      <HiredDate>1990-03-01T00:00:00</HiredDate>
+      <UniversityGraduated>VIA</UniversityGraduated>
+      <ResidencyYearDuration>7</ResidencyYearDuration>
+      <ResidencyGrade>90</ResidencyGrade>
+    </Doctor>
   </doctors>
 </Doctors>

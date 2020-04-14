@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Doctors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <doctors>
+    <Doctor xsi:type="CardiologistDoctor">
+      <Id>0</Id>
+      <Name>Maria</Name>
+      <ForName>Zaharia</ForName>
+      <CNP>1800301204105</CNP>
+      <HiredDate>1990-03-01T00:00:00</HiredDate>
+      <UniversityGraduated>VIA</UniversityGraduated>
+      <ResidencyYearDuration>7</ResidencyYearDuration>
+      <ResidencyGrade>90</ResidencyGrade>
+    </Doctor>
+  </doctors>
+</Doctors>

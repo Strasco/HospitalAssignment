@@ -1,17 +1,10 @@
-﻿using EssensysHospitalWPF.Model.MedicTypes;
-using log4net;
+﻿using log4net;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Windows;
-using System.Windows.Threading;
-using System.Xml.Serialization;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace EssensysHospitalWPF.Model
 {
@@ -101,7 +94,6 @@ namespace EssensysHospitalWPF.Model
             }
             
             //daca ajungem aici inseamna ca doctorul este supra aglomerat
-            
         }
         public float GetTotalQueueTime()//timpul total al tuturor activitatilor al acestui medic
         {
@@ -113,7 +105,5 @@ namespace EssensysHospitalWPF.Model
 
             return totalTime;
         }
-
-
     }
 }
