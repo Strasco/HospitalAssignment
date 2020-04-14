@@ -24,24 +24,6 @@ namespace EssensysHospitalWPF
             file.Close();
         }
 
-
-        //public static void WriteSpecificDoc(Doctor doctor)
-        //{
-        //    int nextId = ReadNextAvailableId();
-        //        switch (doctor.GetType().Name)
-        //        {
-        //            case "CardiologistDoctor":
-        //                WriteXML((CardiologistDoctor)doctor);
-        //                break;
-        //            case "InternalMedicineDoctor":
-        //                WriteXML((InternalMedicineDoctor)doctor);
-        //                break;
-        //            case "OrthopedicDoctor":
-        //                WriteXML((OrthopedicDoctor)doctor);
-        //                break;
-        //        }
-        //}
-
         public static ListOfDoctors ReadXML()
         {
             string fileName = Environment.CurrentDirectory + "\\SerializationOverview.xml";

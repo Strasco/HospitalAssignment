@@ -20,6 +20,7 @@ using log4net;
 using System.IO;
 using System.Reflection;
 using EssensysHospitalWPF.Model.MedicTypes;
+using EssensysHospitalWPF.Pages;
 
 namespace EssensysHospitalWPF
 {
@@ -46,7 +47,6 @@ namespace EssensysHospitalWPF
             // iar acea lista vine iar scrisa intr-un fisier xml cu noul doctor
   
             Doctor doc = hospital.HireDoctor("Maria", "Zaharia", "1800301204105", hireDate, "VIA", 7, 90, "Cardiologist");//creaza 2 doctori si angajeaza-i direct
-            Doctor doc2 = hospital.HireDoctor("Maria", "Alvarez", "1800301204105", hireDate, "VIA", 7, 90, "Cardiologist");
          
             GeneratePacient();
         }
@@ -67,24 +67,28 @@ namespace EssensysHospitalWPF
             int randForName = rnd.Next(0, 8);
             int randMl = rnd.Next(1, 60);
             MedicalActivity activity = null;
-            switch (randActivity)
+            
+            switch (randActivity)//un pacient vine in spital si cere o anumita activitate (in cazul nostru e una aleatorie)
             {
                 case 0:
-                    activity = new ClinicalConsultation(pacientName[randName], pacientForName[randForName], dt, false, 3);
+                    activity = new ClinicalConsultation(pacientName[randName], pacientForName[randForName], dt, false, 3);//consultatie
                     break;
                 case 1:
-                    activity = new SurgeryActivity(pacientName[randName], pacientForName[randForName], dt, false,randMl,SurgeryActivity.Anesthetic.LocalAnesthetic);
+                    activity = new SurgeryActivity(pacientName[randName], pacientForName[randForName], dt, false,randMl,SurgeryActivity.Anesthetic.LocalAnesthetic);//operatie
                     break;
                 case 2:
-                    activity = new RecuparationActivity(pacientName[randName], pacientForName[randForName], dt, false, 10);
+                    activity = new RecuparationActivity(pacientName[randName], pacientForName[randForName], dt, false, 10);//recuperare
                     break;
             }
-            var doc = hospital.FindFirstAvailableDoctorOfSpecialization(docSpecialization[randSpec]);
+            //dupa ce s-a stabilit activitatea ce o vrea pacientul, el de asemenea cere si un doctor de specialitate
+            //e.g Vrea consultate de la un cardiolog, sau vrea operatie de la un doctor ortoped etc........
+            var doc = hospital.FindFirstAvailableDoctorOfSpecialization(docSpecialization[randSpec]);//se alege in mod aleatoriu un doctor de specialitate
             if (doc != null)//daca am gasit doctor pe specializarea cu timpul cel mai mic de completare bagam pacientul in coada
             {
+                doctorLog.AppendText("Doctorul " + doc.Name + " pe specialitatea: " + doc.GetType().Name + " a luat pacientul " + activity.PacientName + " " + activity.PacientForname + " urmeaza sa efectueze " + activity.GetType().Name + " pentru pretul de: " + activity.CalculatePrice() + "si dureaza " + activity.TimeToComplete() + "\r");
                 doc.Enqueue(activity);
             }
-            else// daca nu este doctor pe specializare pacientul dispare op
+            else// daca nu este doctor pe specializare pacientul dispare
             {
                 doctorLog.AppendText("Nu este doctor liber pe specializarea: " + docSpecialization[randSpec] + "\r");
             }
@@ -94,7 +98,7 @@ namespace EssensysHospitalWPF
 
         private void ChangeToAddDoctor(object sender, RoutedEventArgs e)
         {
-            NewDoctor doctorWindow = new NewDoctor();
+            NewDoctorWindow doctorWindow = new NewDoctorWindow();
             doctorWindow.Show();
         }
 
@@ -108,12 +112,14 @@ namespace EssensysHospitalWPF
 
         private void AddDoctor(object sender, RoutedEventArgs e)
         {
-
+            NewDoctorWindow newDoctor = new NewDoctorWindow();
+            newDoctor.Show();
         }
 
         private void ShowDoctors(object sender, RoutedEventArgs e)
         {
-
+            AllDoctorsWindow window = new AllDoctorsWindow();
+            window.Show();
         }
     }
 }

@@ -14,7 +14,7 @@
     <Doctor xsi:type="CardiologistDoctor">
       <Id>1</Id>
       <Name>Maria</Name>
-      <ForName>Alvarez</ForName>
+      <ForName>Zaharia</ForName>
       <CNP>1800301204105</CNP>
       <HiredDate>1990-03-01T00:00:00</HiredDate>
       <UniversityGraduated>VIA</UniversityGraduated>
@@ -34,7 +34,7 @@
     <Doctor xsi:type="CardiologistDoctor">
       <Id>3</Id>
       <Name>Maria</Name>
-      <ForName>Alvarez</ForName>
+      <ForName>Zaharia</ForName>
       <CNP>1800301204105</CNP>
       <HiredDate>1990-03-01T00:00:00</HiredDate>
       <UniversityGraduated>VIA</UniversityGraduated>

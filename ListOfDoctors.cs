@@ -8,6 +8,8 @@ using System.Xml.Serialization;
 namespace EssensysHospitalWPF
 {
     [XmlInclude(typeof(CardiologistDoctor))]
+    [XmlInclude(typeof(InternalMedicineDoctor))]
+    [XmlInclude(typeof(OrthopedicDoctor))]
     [XmlRoot("Doctors")]
     public class ListOfDoctors
     {

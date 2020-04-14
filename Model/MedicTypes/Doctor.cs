@@ -80,13 +80,6 @@ namespace EssensysHospitalWPF.Model
 
         public void Enqueue(MedicalActivity job)//de fiecare daca cand vine un pacient nou, metoda aceasta se cheama
         {
-            foreach (Window window in System.Windows.Application.Current.Windows)
-            {
-                if (window.GetType() == typeof(MainWindow))
-                {
-                    (window as MainWindow).doctorLog.AppendText("Doctor " + Name + " a luat pacientul " + job.PacientName + " " + job.PacientForname + " urmeaza sa efectueze " + job.GetType().Name + " pentru pretul de: " + job.CalculatePrice() + "si dureaza " + job.TimeToComplete() + "\r");
-                }
-            }
 
             switch (job.GetType().Name)//in functie de ce vrea pacientul se personalizeaza functie Enqueue
             {

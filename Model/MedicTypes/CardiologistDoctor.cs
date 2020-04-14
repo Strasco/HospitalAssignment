@@ -26,5 +26,10 @@ namespace EssensysHospitalWPF.Model.MedicTypes
             thread.IsBackground = true;
             thread.Start();
         }
+
+        public override string ToString()
+        {
+            return "ID: " + Id + " Nume: " + Name + " Prenume: " + ForName + " CNP: " + CNP + " Angajat: " + HiredDate + " Universitate: " + UniversityGraduated + " Nota: " + ResidencyGrade;
+        }
     }
 }
