@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace EssensysHospitalWPF.Model.MedicTypes
 {
-    class OrthopedicDoctor : Doctor
+    public class OrthopedicDoctor : Doctor
     {
+        public OrthopedicDoctor() { }
         public OrthopedicDoctor(int id, string name, string forName, string cnp, DateTime hiredDate, string universityGraduated, int residencyDuration, float residencyGrade)
         {
             Id = id;
@@ -16,6 +18,10 @@ namespace EssensysHospitalWPF.Model.MedicTypes
             UniversityGraduated = universityGraduated;
             ResidencyYearDuration = residencyDuration;
             ResidencyGrade = residencyGrade;
+
+            var thread = new Thread(new ThreadStart(OnStart));
+            thread.IsBackground = true;
+            thread.Start();
         }
         public override float RiskFactor => 1.25f;
     }

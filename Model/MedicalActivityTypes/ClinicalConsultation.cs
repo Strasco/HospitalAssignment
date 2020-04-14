@@ -9,15 +9,19 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
         private int _priceIndividual;
         private int _priceRegular;
         private float _consultationDiscount;
-            
-        public ClinicalConsultation(int id, string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic)
+
+        public bool Regular { get; set; }
+        public int Frequency { get; set; } //frecventa in luni
+        protected override float InsuranceDiscountAmount => 0.07f;
+
+        public ClinicalConsultation(string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, int frequency)
         {
             //base fields
-            Id = id;
             PacientName = pacientName;
             PacientForname = pacientForname;
             PatientBirthday = pacientBirthDay;
             HasChronicDiseases = chronic;
+            Frequency = frequency;
 
             //private fields
             _priceIndividual = 100;
@@ -25,10 +29,10 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
             _consultationDiscount = 0.15f;
 
         }
-        public bool Regular { get; set; }
-        public int Frequency { get; set; } //frecventa in luni
+        
 
-        public float CalculatePrice()
+
+        public override float CalculatePrice()
         {   //TODO: Add age discount
             float _price;
             if (Regular)
@@ -45,6 +49,9 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
                 _price -= (_price * _consultationDiscount);
             }
 
+            if (MEDICAL_INSURANCE)
+                return _price - (_price*InsuranceDiscountAmount);
+
             return _price;
         }
 
@@ -54,6 +61,11 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
             var today = DateTime.Today;
             age = (today.Year - PatientBirthday.Year);
             return age;
+        }
+
+        public override int TimeToComplete()
+        {
+            return 3000;
         }
     }
 }

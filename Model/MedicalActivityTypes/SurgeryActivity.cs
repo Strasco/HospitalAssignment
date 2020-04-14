@@ -10,9 +10,8 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
         private int _priceGeneral;
         private Anesthetic _anestheticUsed;
 
-        public SurgeryActivity(int id, string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, float ml, Anesthetic anesthetic)
+        public SurgeryActivity(string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, float ml, Anesthetic anesthetic)
         {
-            Id = id;
             PacientName = pacientName;
             PacientForname = pacientForname;
             PatientBirthday = pacientBirthDay;
@@ -26,9 +25,10 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
 
         public enum Anesthetic {LocalAnesthetic, GeneralAnesthetic}
         public float Ml { get; set; }//dozajul
-        public float CalculatePrice()
+        protected override float InsuranceDiscountAmount => 0.15f;
+
+        public override float CalculatePrice()
         {
-            
             //TODO: Add age discount
             switch (_anestheticUsed)
             {
@@ -42,6 +42,11 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
             }
             return 0;
             
+        }
+
+        public override int TimeToComplete()
+        {
+            return 15000;
         }
     }
 }

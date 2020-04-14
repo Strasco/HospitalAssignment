@@ -1,0 +1,24 @@
+﻿<Window x:Class="EssensysHospitalWPF.MainWindow"
+        WindowStartupLocation="Manual" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EssensysHospitalWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Background="#FF13BCD6" MaxWidth="800" MaxHeight="500">
+        <Label Content="Spital Essensys Software" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="AddDoctor" Content="Adaugare Doctor Nou" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Height="73" Click="AddDoctor"/>
+        <Button x:Name="EnqueueButton" Content="Generare Pacient" HorizontalAlignment="Left" Margin="136,320,0,0" VerticalAlignment="Top" Click="EnqueueButton_Click" Height="73" Width="109"/>
+        <RichTextBox x:Name="doctorLog" Margin="18,84,233,131">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="ShowDoctors" Content="Afisare Doctori" HorizontalAlignment="Left" Margin="250,320,0,0" VerticalAlignment="Top" Height="73" Width="122" Click="ShowDoctors"/>
+
+    </Grid>
+</Window>

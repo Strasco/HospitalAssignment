@@ -10,26 +10,26 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
         private float _discount;
         private float _discountedPrice;
         public int DurationInWeeks { get; set; }
-        
 
-        public RecuparationActivity(int id, string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic)
+        protected override float InsuranceDiscountAmount => 0.1f;
+
+        public RecuparationActivity(string pacientName, string pacientForname, DateTime pacientBirthDay, bool chronic, int weekDuration)
         {
             //base fields
-            Id = id;
             PacientName = pacientName;
             PacientForname = pacientForname;
             PatientBirthday = pacientBirthDay;
             HasChronicDiseases = chronic;
-            
+            DurationInWeeks = weekDuration;
             _price = 100;
             _discount = 0.35f;
-            _discountedPrice = _price - (_price * 0.35f);
+            _discountedPrice = _price - (_price * _discount);
 
             //private fields
 
         }
 
-        public float CalculatePrice()
+        public override float CalculatePrice()
         {
             float finalPrice = 0;
             for (int i = 0; i < DurationInWeeks; i++)
@@ -45,8 +45,15 @@ namespace EssensysHospitalWPF.Model.MedicalActivityTypes
                     finalPrice += _discountedPrice;
                 }
             }
+            if (MEDICAL_INSURANCE)
+                return finalPrice - (finalPrice * InsuranceDiscountAmount);
+
             return finalPrice;
         }
-        
+
+        public override int TimeToComplete()
+        {
+            return 5000;
+        }
     }
 }

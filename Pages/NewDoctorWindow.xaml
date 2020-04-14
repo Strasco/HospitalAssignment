@@ -1,0 +1,30 @@
+﻿<Window x:Class="EssensysHospitalWPF.NewDoctor"
+        WindowStartupLocation="Manual" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EssensysHospitalWPF"
+        mc:Ignorable="d"
+        Title="NewDoctor" Height="450" Width="800">
+    <Grid Background="#FF13BCD6">
+        <Label Content="Doctor Nou" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Nume:" HorizontalAlignment="Left" Margin="54,97,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Prenume:" HorizontalAlignment="Left" Margin="54,134,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Nume:" HorizontalAlignment="Left" Margin="54,97,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="CNP" HorizontalAlignment="Left" Margin="54,171,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Data Angajare:" HorizontalAlignment="Left" Margin="54,208,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Universitate absolvita:" HorizontalAlignment="Left" Margin="54,245,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Durata rezidentiat:" HorizontalAlignment="Left" Margin="54,282,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Nota rezidentiat:" HorizontalAlignment="Left" Margin="54,319,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Inapoi" HorizontalAlignment="Left" Margin="724,374,0,0" VerticalAlignment="Top" Height="33" Width="55" Click="BackToMain"/>
+        <TextBox HorizontalAlignment="Left" MaxHeight="30" Margin="277,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="29" FontSize="20" Text="nume"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="30" Margin="276,138,0,0" Text="prenume" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="29" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="13" Margin="277,175,0,0" PreviewTextInput="NumberValidationTextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="29" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="277,249,0,0" Text="universitate" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Height="29" FontSize="20"/>
+        <DatePicker HorizontalAlignment="Left" Margin="277,214,0,0" VerticalAlignment="Top" Width="123" Height="30" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="1" Margin="277,286,0,0" PreviewTextInput="NumberValidationTextBox" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="29" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="1" Margin="277,323,0,0" PreviewTextInput="NumberValidationTextBox" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="29" FontSize="20"/>
+        <Button Content="Adaugare" HorizontalAlignment="Left" Margin="54,369,0,0" VerticalAlignment="Top" Height="34" Width="70"/>
+    </Grid>
+</Window>

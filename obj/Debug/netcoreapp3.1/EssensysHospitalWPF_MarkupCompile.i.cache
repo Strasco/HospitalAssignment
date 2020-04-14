@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\vladz\source\repos\EssensysHospitalClinic\EssensysHospitalWPF\App.xaml
-11151548125
-
-131120741765
-1921654412462
-MainWindow.xaml;
+3-146841444
+1-1575529357
+18-264310744
+193980267411
+Pages\DoctorListWindow.xaml;Pages\MainWindow.xaml;Pages\NewDoctorWindow.xaml;
 
 True
 
