@@ -31,7 +31,7 @@ namespace EssensysHospitalWPF
             //De fiecare data cand chemi HireDoctor, se va verifica intai daca doctorul este eligibil pentru angajare. Se va citi fisierul xml de doctori, noul doctor va fi bagat intr-o lista
             // iar acea lista vine iar scrisa intr-un fisier xml cu noul doctor
   
-            Doctor doc = hospital.HireDoctor("Maria", "Zaharia", "1800301204105", hireDate, "VIA", 7, 90, "Cardiologist");//creaza 2 doctori si angajeaza-i direct
+            hospital.HireDoctor("Maria", "Zaharia", "1800301204105", hireDate, "VIA", 7, 90, "Cardiologist");//creaza 2 doctori si angajeaza-i direct
          
             GeneratePacient();
         }
